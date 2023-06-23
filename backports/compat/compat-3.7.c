@@ -14,13 +14,13 @@
 #include <linux/pci_regs.h>
 #include <linux/of.h>
 
-bool mod_delayed_work(struct workqueue_struct *wq, struct delayed_work *dwork,
-		      unsigned long delay)
-{
-	cancel_delayed_work(dwork);
-	queue_delayed_work(wq, dwork, delay);
-	return false;
-}
+//bool mod_delayed_work(struct workqueue_struct *wq, struct delayed_work *dwork,
+//		      unsigned long delay)
+//{
+//	cancel_delayed_work(dwork);
+//	queue_delayed_work(wq, dwork, delay);
+//	return false;
+//}
 EXPORT_SYMBOL_GPL(mod_delayed_work);
 
 #ifdef CONFIG_PCI
